@@ -11,14 +11,14 @@
     
     <script>
         function retrieveWindowProperties() {
-            var properties = {
+            const properties = {
                 width: window.innerWidth,
                 height: window.innerHeight,
                 url: window.location.href,
                 isOpen: !window.closed
             };
     
-            var newWindow = window.open("", "_blank");
+            const newWindow = window.open("", "_blank");
             newWindow.document.write("<h2>Window Properties</h2>");
             newWindow.document.write("<p>Width: " + properties.width + "</p>");
             newWindow.document.write("<p>Height: " + properties.height + "</p>");
