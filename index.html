@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Properties</title>
+</head>
+<body>
+    <script src="script.js"></script>
+    <button onclick="retrieveWindowProperties()">Get Window Properties</button>
+    
+    <script>
+        function retrieveWindowProperties() {
+            var properties = {
+                width: window.innerWidth,
+                height: window.innerHeight,
+                url: window.location.href,
+                isOpen: !window.closed
+            };
+    
+            var newWindow = window.open("", "_blank");
+            newWindow.document.write("<h2>Window Properties</h2>");
+            newWindow.document.write("<p>Width: " + properties.width + "</p>");
+            newWindow.document.write("<p>Height: " + properties.height + "</p>");
+            newWindow.document.write("<p>URL: " + properties.url + "</p>");
+            newWindow.document.write("<p>Is Open: " + properties.isOpen + "</p>");
+        }
+    </script>
+    
+</body>
+</html>
